@@ -1,0 +1,1 @@
+export { default as UseEffectHook_1 } from './UseEffectHook_1'

@@ -1,5 +1,8 @@
 import React from 'react'
 import { UseStateHook_1, UseStateHook_2, UseStateHook_3, UseStateHook_4 } from '../components/useStateHook'
+import { UseEffectHook_1 } from '../components/useEffectHook'
+
+
 
 const App = () => {
   return (
@@ -7,7 +10,9 @@ const App = () => {
       {/* <UseStateHook_1 />s */}
       {/* <UseStateHook_2 /> */}
       {/* <UseStateHook_3 /> */}
-      <UseStateHook_4 />
+      {/* <UseStateHook_4 /> */}
+      <UseEffectHook_1 />
+
     </div>
   )
 }
