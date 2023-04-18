@@ -16,7 +16,8 @@ const UseEffectHook_1 = () => {
   // 👆
   // The first parameter is the function that contains the code to be executed as the effect.
   // The second parameter is an optional cleanup function that can be used to clean up any side-effects created by the effect.
-  // The third parameter is an array of dependencies that the effect depends on. If any of these dependencies change, the effect will be re-executed. If the array is empty, the effect will only run once, when the component mounts.
+  // The third parameter is an array of dependencies that the effect depends on. If any of these dependencies change, the effect will be re-executed. 
+  // If the array is empty, the effect will only run once, when the component mounts.
 
   useEffect(() => {
     document.title = `Clicked ${count} times`;
@@ -28,7 +29,8 @@ const UseEffectHook_1 = () => {
 
   // 👆 why does the second useEffect set the value to 5 even though the setCount function has not been triggered yet?
 
-  // --> When the component first mounts, the count state is set to 0, so the setValue function will be called with the initial value of 1, and the value state will be set to 5
+  // --> When the component first mounts, the count state is set to 0, so the setValue function will be called with the initial value of 1, 
+  //     and the value state will be set to 5
 
   useEffect(() => {
     if (count !== 0) {
