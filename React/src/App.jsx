@@ -6,6 +6,7 @@ import {
   UseStateHook_4,
 } from "../components/useStateHook";
 import { UseEffectHook_1, UseEffectHook_2 } from "../components/useEffectHook";
+import UseEffectHook_3 from "../components/useEffectHook/UseEffectHook_3";
 
 const App = () => {
   return (
@@ -15,7 +16,8 @@ const App = () => {
       {/* <UseStateHook_3 /> */}
       {/* <UseStateHook_4 /> */}
       {/* <UseEffectHook_1 /> */}
-      <UseEffectHook_2 />
+      {/* <UseEffectHook_2 /> */}
+      <UseEffectHook_3 />
     </div>
   );
 };
