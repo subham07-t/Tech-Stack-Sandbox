@@ -1,3 +1,5 @@
+// How to fetch data using useEffect and axios
+
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
