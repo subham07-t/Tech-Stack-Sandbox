@@ -14,7 +14,8 @@ const UseEffectHook_2 = () => {
     };
   }, [count]);
 
-  //👆 Here The cleanup function is important because it prevents the interval from continuing to run even after the component is no longer being displayed. If the cleanup function is not called, the interval would continue to run in the background, wasting system resources and potentially causing memory leaks.
+  //👆 Here The cleanup function is important because it prevents the interval from continuing to run even after the component is no longer being displayed. 
+  // If the cleanup function is not called, the interval would continue to run in the background, wasting system resources and potentially causing memory leaks.
 
   return <div>{count}</div>;
 };
