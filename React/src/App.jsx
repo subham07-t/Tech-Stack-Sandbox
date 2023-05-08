@@ -11,6 +11,8 @@ import Root from "../components/useContextHook/Root";
 import ParentComponent from "../components/useCallbackHook/ParentComponent";
 import FocusInput from "../components/useRefHook/FocusInput";
 import HookTimer from "../components/useRefHook/HookTimer";
+import DocTitleOne from "../components/customHook/DocTitleOne";
+import DocTitleTwo from "../components/customHook/DocTitleTwo";
 
 const App = () => {
   return (
@@ -25,7 +27,9 @@ const App = () => {
       {/* <Root /> */}
       {/* <ParentComponent /> */}
       {/* <FocusInput /> */}
-      <HookTimer />
+      {/* <HookTimer /> */}
+      <DocTitleOne />
+      <DocTitleTwo />
     </div>
   );
 };
