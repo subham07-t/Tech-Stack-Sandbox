@@ -13,6 +13,7 @@ import FocusInput from "../components/useRefHook/FocusInput";
 import HookTimer from "../components/useRefHook/HookTimer";
 import DocTitleOne from "../components/customHook/DocTitleOne";
 import DocTitleTwo from "../components/customHook/DocTitleTwo";
+import { CounterOne } from "../components/useReducer.jsx/CounterOne";
 
 const App = () => {
   return (
@@ -28,8 +29,9 @@ const App = () => {
       {/* <ParentComponent /> */}
       {/* <FocusInput /> */}
       {/* <HookTimer /> */}
-      <DocTitleOne />
-      <DocTitleTwo />
+      {/* <DocTitleOne />
+      <DocTitleTwo /> */}
+      <CounterOne />
     </div>
   );
 };
