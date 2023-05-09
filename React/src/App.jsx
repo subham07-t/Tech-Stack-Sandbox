@@ -14,6 +14,7 @@ import HookTimer from "../components/useRefHook/HookTimer";
 import DocTitleOne from "../components/customHook/DocTitleOne";
 import DocTitleTwo from "../components/customHook/DocTitleTwo";
 import { CounterOne } from "../components/useReducer.jsx/CounterOne";
+import { CounterTwo } from "../components/useReducer.jsx/CounterTwo";
 
 const App = () => {
   return (
@@ -31,7 +32,8 @@ const App = () => {
       {/* <HookTimer /> */}
       {/* <DocTitleOne />
       <DocTitleTwo /> */}
-      <CounterOne />
+      {/* <CounterOne /> */}
+      <CounterTwo />
     </div>
   );
 };
