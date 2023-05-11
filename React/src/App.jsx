@@ -15,6 +15,7 @@ import DocTitleOne from "../components/customHook/DocTitleOne";
 import DocTitleTwo from "../components/customHook/DocTitleTwo";
 import { CounterOne } from "../components/useReducer.jsx/CounterOne";
 import { CounterTwo } from "../components/useReducer.jsx/CounterTwo";
+import DataFetching from "../components/useReducer.jsx/DataFetching";
 
 const App = () => {
   return (
@@ -33,7 +34,8 @@ const App = () => {
       {/* <DocTitleOne />
       <DocTitleTwo /> */}
       {/* <CounterOne /> */}
-      <CounterTwo />
+      {/* <CounterTwo /> */}
+      <DataFetching />
     </div>
   );
 };
