@@ -1,10 +1,12 @@
 import React from "react";
-import Counter from "./features/counter/Counter";
+import PostList from "./features/posts/PostList";
+// import Counter from "./features/counter/Counter";
 
 const App = () => {
   return (
     <div>
-      <Counter />
+      {/* <Counter /> */}
+      <PostList />
     </div>
   );
 };
