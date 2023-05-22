@@ -23,6 +23,33 @@ export const addNewPost = createAsyncThunk(
   }
 );
 
+export const updatePost = createAsyncThunk(
+  "posts/updatePost",
+  async (initialPost) => {
+    const { id } = initialPost;
+    try {
+      const response = await axios.put(`${BASE_URL}/${id}`, initialPost);
+      return response.data;
+    } catch (err) {
+      return err.message;
+    }
+  }
+);
+
+export const deletePost = createAsyncThunk(
+  "posts/deletePost",
+  async (initialPost) => {
+    const { id } = initialPost;
+    try {
+      const response = await axios.delete(`${BASE_URL}/${id}`);
+      if (response?.status === 200) return initialPost;
+      return `${response?.status}: ${response?.statusText}`;
+    } catch (err) {
+      return initialPost;
+    }
+  }
+);
+
 const postsSlice = createSlice({
   name: "posts",
   initialState,
@@ -73,8 +100,6 @@ const postsSlice = createSlice({
             thumbsUp: 0,
             wow: 0,
             heart: 0,
-            rocket: 0,
-            coffee: 0,
           };
           return post;
         });
@@ -100,10 +125,29 @@ const postsSlice = createSlice({
           thumbsUp: 0,
           hooray: 0,
           heart: 0,
-          rocket: 0,
-          eyes: 0,
         };
         state.posts.push(action.payload);
+      })
+      .addCase(updatePost.fulfilled, (state, action) => {
+        if (!action.payload?.id) {
+          console.log("Update could not complete");
+          console.log(action.payload);
+          return;
+        }
+        const { id } = action.payload;
+        action.payload.date = new Date().toISOString();
+        const posts = state.posts.filter((post) => post.id !== id);
+        state.posts = [...posts, action.payload];
+      })
+      .addCase(deletePost.fulfilled, (state, action) => {
+        if (!action.payload?.id) {
+          console.log("Delete could not complete");
+          console.log(action.payload);
+          return;
+        }
+        const { id } = action.payload;
+        const posts = state.posts.filter((post) => post.id !== id);
+        state.posts = posts;
       });
   },
 });
