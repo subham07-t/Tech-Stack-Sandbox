@@ -1,4 +1,4 @@
-# Campus Keeper UMS App Auth API Documentation
+# API Documentation
 
 ## User Registration
 
