@@ -41,5 +41,5 @@ export const {
   useGetTodosQuery,
   useAddTodoMutation,
   useUpdateTodoMutation,
-  useDeleteTodoMutation,
+  useDeleteTodoMutation
 } = apiSlice;
