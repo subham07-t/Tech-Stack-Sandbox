@@ -28,7 +28,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  background-color: purple;
+  background-color: #1e2d53;
   color: whitesmoke;
   position: sticky;
   top: 0;
@@ -75,7 +75,7 @@ article {
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: 2rem;
 }
 
 h2 {
@@ -128,4 +128,30 @@ textarea {
 .deleteButton {
   background-color: palevioletred;
   color: white;
+}
+
+@media (max-width: 320px) {
+  section {
+    flex-direction: column;
+  }
+
+  h2 {
+    margin-left: 1rem;
+  }
+  article {
+    width: 90%;
+  }
+  form {
+    width: 95%;
+    padding-left: 0.5rem;
+  }
+  .App ul {
+    padding-left: 0.5rem;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+  section {
+    flex-direction: column;
+  }
 }

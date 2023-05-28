@@ -4,6 +4,7 @@ import { selectUserById } from "./userSlice";
 
 /* ---------------------- Use of createAsyncThunk ------- */
 // import { selectPostsByUser } from "../posts/postsSlice";
+/* ------------------------------------------------------- */
 
 import { useGetPostsByUserIdQuery } from "../posts/postsSlice";
 
@@ -15,6 +16,7 @@ const UserPage = () => {
   // const postsForUser = useSelector((state) =>
   //   selectPostsByUser(state, Number(userId))
   // );
+  /* -------------------------------------------------- */
 
   const {
     data: postsForUser,

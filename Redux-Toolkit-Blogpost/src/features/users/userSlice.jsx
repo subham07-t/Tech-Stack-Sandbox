@@ -42,7 +42,10 @@ export const {
   (state) => selectUsersData(state) ?? initialState
 );
 
-/* ------- For createAsyncThunk ---- */
+/* -------------------------------------------------------------------- */
+
+/* ----------------------- For createAsyncThunk ---------------------- */
+
 // import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 // import axios from "axios";
 
@@ -72,3 +75,5 @@ export const {
 //   state.users.find((user) => user.id === userId);
 
 // export default usersSlice.reducer;
+
+/* ------------------------------------------------------------- */

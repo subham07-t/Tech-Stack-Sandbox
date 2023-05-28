@@ -6,17 +6,26 @@ import { useNavigate } from "react-router-dom";
 // import { useDispatch, useSelector } from "react-redux";
 // import { addNewPost } from "./postsSlice";
 
+/* ------------------------------------------------------- */
+
 /* ------- For RTK Query ---- */
 import { useSelector } from "react-redux";
 import { useAddNewPostMutation } from "./postsSlice";
+
+/* ------------------------------------------------------- */
 
 const AddPostForm = () => {
   /* ---------------------- Use of createAsyncThunk ------- */
   // const dispatch = useDispatch();
   // const [addRequestStatus, setAddRequestStatus] = useState("idle");
+  /* ------------------------------------------------------- */
 
   /* ------- For RTK Query ---- */
+
   const [addNewPost, { isLoading }] = useAddNewPostMutation();
+
+  /* ------------------------------------------------------- */
+
   const navigate = useNavigate();
 
   const [title, setTitle] = useState("");
@@ -51,6 +60,8 @@ const AddPostForm = () => {
   //     }
   //   }
   // };
+
+  /* ------------------------------------------------------- */
 
   const canSave = [title, content, userId].every(Boolean) && !isLoading;
 

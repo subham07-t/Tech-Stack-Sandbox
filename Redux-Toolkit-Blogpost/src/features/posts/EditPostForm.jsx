@@ -4,10 +4,12 @@ import { useParams, useNavigate } from "react-router-dom";
 /* ---------------------- Use of createAsyncThunk ------- */
 // import { useDispatch, useSelector } from "react-redux";
 // import { selectPostById, updatePost, deletePost } from "./postsSlice";
+/* ------------------------------------------------------- */
 
 /* ------- For RTK Query ---- */
 import { useSelector } from "react-redux";
 import { selectPostById } from "./postsSlice";
+/* ------------------------------------------------------- */
 
 import { selectAllUsers } from "../users/userSlice";
 import { useUpdatePostMutation, useDeletePostMutation } from "./postsSlice";
@@ -29,6 +31,7 @@ const EditPostForm = () => {
   /* ---------------------- Use of createAsyncThunk ------- */
   // const [requestStatus, setRequestStatus] = useState("idle");
   // const dispatch = useDispatch();
+  /* ------------------------------------------------------- */
 
   if (!post) {
     return (
@@ -71,6 +74,7 @@ const EditPostForm = () => {
   //     }
   //   }
   // };
+  /* ------------------------------------------------------- */
 
   const canSave = [title, content, userId].every(Boolean) && !isLoading;
 
@@ -116,6 +120,7 @@ const EditPostForm = () => {
   //     setRequestStatus("idle");
   //   }
   // };
+  /* ------------------------------------------------------- */
 
   const onDeletePostClicked = async () => {
     try {

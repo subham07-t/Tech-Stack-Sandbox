@@ -27,6 +27,8 @@ const PostsList = () => {
 };
 export default PostsList;
 
+/* ----------------------------------------------------- */
+
 /* ---------------------- Use of createAsyncThunk ------- */
 
 // import { selectPostIds, getPostsStatus, getPostsError } from "./postsSlice";
@@ -51,3 +53,5 @@ export default PostsList;
 // };
 
 // export default PostList;
+
+/* ----------------------------------------------------- */

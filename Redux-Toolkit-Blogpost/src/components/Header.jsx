@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <header className="Header">
-      <h1>Redux Toolkit Practice</h1>
+      <h1>Redux Toolkit BlogPost App</h1>
       <nav>
         <ul>
           <li>
