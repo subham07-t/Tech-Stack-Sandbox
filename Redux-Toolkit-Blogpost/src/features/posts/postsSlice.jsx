@@ -13,7 +13,7 @@ export const extendedApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     getPosts: builder.query({
       query: () => "/posts",
-      transformErrorResponse: (responseData) => {
+      transformResponse: (responseData) => {
         let min = 1;
         const loadedPosts = responseData.map((post) => {
           if (!post?.date)
@@ -28,6 +28,7 @@ export const extendedApiSlice = apiSlice.injectEndpoints({
             };
           return post;
         });
+
         return postsAdapter.setAll(initialState, loadedPosts);
       },
       providesTags: (result, error, arg) => [

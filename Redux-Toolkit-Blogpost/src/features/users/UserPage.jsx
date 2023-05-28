@@ -50,7 +50,7 @@ const UserPage = () => {
     <section>
       <h2>{user?.name}</h2>
 
-      <ol>{postTitles}</ol>
+      <ol>{content}</ol>
     </section>
   );
 };
