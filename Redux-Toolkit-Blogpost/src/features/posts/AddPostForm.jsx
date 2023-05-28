@@ -3,7 +3,6 @@ import { selectAllUsers } from "../users/userSlice";
 import { useNavigate } from "react-router-dom";
 
 /* ---------------------- Use of createAsyncThunk ------- */
-
 // import { useDispatch, useSelector } from "react-redux";
 // import { addNewPost } from "./postsSlice";
 
@@ -13,12 +12,10 @@ import { useAddNewPostMutation } from "./postsSlice";
 
 const AddPostForm = () => {
   /* ---------------------- Use of createAsyncThunk ------- */
-
   // const dispatch = useDispatch();
   // const [addRequestStatus, setAddRequestStatus] = useState("idle");
 
   /* ------- For RTK Query ---- */
-
   const [addNewPost, { isLoading }] = useAddNewPostMutation();
   const navigate = useNavigate();
 
