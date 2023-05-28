@@ -149,9 +149,3 @@ textarea {
     padding-left: 0.5rem;
   }
 }
-
-@media (min-width: 321px) and (max-width: 375px) {
-  section {
-    flex-direction: column;
-  }
-}
