@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const apiSlice = createApi({
   reducerPath: "api",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:8080" }),
+  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:8081" }),
   tagTypes: ["Todos"],
   endpoints: (builder) => ({
     getTodos: builder.query({
@@ -41,5 +41,5 @@ export const {
   useGetTodosQuery,
   useAddTodoMutation,
   useUpdateTodoMutation,
-  useDeleteTodoMutation
+  useDeleteTodoMutation,
 } = apiSlice;
