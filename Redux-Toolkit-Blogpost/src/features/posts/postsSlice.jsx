@@ -222,10 +222,7 @@ export const {
 //       if (existingPost) {
 //         existingPost.reactions[reaction]++;
 //       }
-//     },
-//     increaseCount(state) {
-//       state.count = state.count + 1;
-//     },
+//     }
 //   },
 //   extraReducers(builder) {
 //     builder
@@ -301,13 +298,12 @@ export const {
 
 // export const getPostsStatus = (state) => state.posts.status;
 // export const getPostsError = (state) => state.posts.error;
-// export const getCount = (state) => state.posts.count;
 
 // export const selectPostsByUser = createSelector(
 //   [selectAllPosts, (state, userId) => userId],
 //   (posts, userId) => posts.filter((post) => post.userId === userId)
 // );
 
-// export const { increaseCount, reactionAdded } = postsSlice.actions;
+// export const { reactionAdded } = postsSlice.actions;
 
 // export default postsSlice.reducer;
