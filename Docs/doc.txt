@@ -1,0 +1,7 @@
+Three core concept of redux:
+Store, action, redux
+
+Three principle of redux:
+1. The global state of  app stored as an object inside a store.
+2. The only way to change the state is to dispatch an action , an object that describes what happened.
+3. To specify how to state tree updated with action, we have to write pure reducers.
