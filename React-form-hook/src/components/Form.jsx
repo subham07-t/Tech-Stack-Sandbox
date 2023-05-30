@@ -52,44 +52,50 @@ export default function Form() {
     <>
       <h1>Normal form</h1>
       <form onSubmit={handleSubmit(onSubmit, onError)}>
-        <label htmlFor="">Username</label>
-        <input
-          type="text"
-          id="username"
-          {...register("username", {
-            required: { value: true, message: "username is required" },
-          })}
-        />
-        <p>{errors.username?.message}</p>
+        <div className="form-control">
+          {" "}
+          <label htmlFor="">Username</label>
+          <input
+            type="text"
+            id="username"
+            {...register("username", {
+              required: { value: true, message: "username is required" },
+            })}
+          />
+          <p className="error">{errors.username?.message}</p>
+        </div>
 
-        <label htmlFor="">Email</label>
-        <input
-          type="email"
-          id="email"
-          {...register("email", {
-            required: { value: true, message: "email is required" },
-            pattern: {
-              value:
-                /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-              message: "Invalid email format",
-            },
-            validate: {
-              notAdmin: (fieldValue) => {
-                return (
-                  fieldValue !== "admin@example.com" ||
-                  "Enter a different email address"
-                );
+        <div className="form-control">
+          {" "}
+          <label htmlFor="">Email</label>
+          <input
+            type="email"
+            id="email"
+            {...register("email", {
+              required: { value: true, message: "email is required" },
+              pattern: {
+                value:
+                  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                message: "Invalid email format",
               },
-              notBlackListed: (fieldValue) => {
-                return (
-                  !fieldValue.endsWith("baddomain.com") ||
-                  "This domain is not supported"
-                );
+              validate: {
+                notAdmin: (fieldValue) => {
+                  return (
+                    fieldValue !== "admin@example.com" ||
+                    "Enter a different email address"
+                  );
+                },
+                notBlackListed: (fieldValue) => {
+                  return (
+                    !fieldValue.endsWith("baddomain.com") ||
+                    "This domain is not supported"
+                  );
+                },
               },
-            },
-          })}
-        />
-        <p>{errors.email?.message}</p>
+            })}
+          />
+          <p className="error">{errors.email?.message}</p>
+        </div>
 
         <label htmlFor="">facebook</label>
         <input type="text" id="facebook" {...register("social.facebook")} />
